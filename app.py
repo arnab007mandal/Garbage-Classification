@@ -26,7 +26,7 @@ import cv2
 from PIL import Image, ImageOps
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def import_and_predict(image_data, model):
-        size = (224,224)    
+        size = (300,300)    
         image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
         image = np.asarray(image)
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
